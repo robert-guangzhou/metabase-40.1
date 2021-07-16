@@ -60,7 +60,7 @@ RUN INTERACTIVE=false MB_EDITION=$MB_EDITION sh bin/build-drivers.sh
 #COPY --from=drivers /app/source/. .
 
 # build the app
-RUN INTERACTIVE=false MB_EDITION=$MB_EDITION bin/build version uberjar
+#RUN INTERACTIVE=false MB_EDITION=$MB_EDITION bin/build version uberjar
 
 # # ###################
 # # # STAGE 2: runner
