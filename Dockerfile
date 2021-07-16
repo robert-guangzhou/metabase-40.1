@@ -20,7 +20,7 @@ RUN NODE_ENV=production MB_EDITION=$MB_EDITION yarn --frozen-lockfile && yarn bu
 #WORKDIR /app/source
 
 # backend dependencies
-#COPY project.clj .
+COPY project.clj .
 RUN lein deps :tree
 
 ####################
