@@ -2,7 +2,7 @@
 # STAGE 1.1: builder frontend
 ###################
 
-FROM metabase/ci:java-11-lein-2.9.6-clj-1.10.3.822-04-22-2021 as frontend
+FROM radishgz/metabase-centos-ci
 
 ARG MB_EDITION=oss
 
@@ -20,7 +20,7 @@ RUN NODE_ENV=production MB_EDITION=$MB_EDITION yarn --frozen-lockfile && yarn bu
 #WORKDIR /app/source
 
 # backend dependencies
-COPY project.clj .
+#COPY project.clj .
 RUN lein deps :tree
 
 ####################
